@@ -1,0 +1,110 @@
+//colors
+
+$color-black: #000000;
+$color-blue: #54A3FF;
+$color-white: #FFFFFF;
+$color-primary: #24292F;
+$font-color-primary: $color-white;
+$font-color-secondary: #000000;
+
+// fonts
+
+$font-family: 'Roboto', sans-serif;
+$font-weight-normal: 500;
+$font-weight-bold: 800;
+
+$font-size-larger: 48px;
+$line-height-larger: 56px;
+
+$font-size-large: 40px;
+$line-height-large: 47px;
+
+$font-size-medium: 20px;
+$line-height-medium: 23px;
+
+$font-size-small: 12px;
+$line-height-small: 14px;
+
+$font-size-smaller: 10px;
+$line-height-smaller: 12px;
+
+// mixins
+
+@mixin font-size-smaller {
+  font-size: $font-size-smaller;
+  line-height: $line-height-smaller;
+  font-weight: $font-weight-normal;
+}
+
+@mixin font-size-small {
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+  font-weight: $font-weight-normal;
+}
+
+@mixin font-size-medium {
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
+  font-weight: $font-weight-bold;
+}
+
+@mixin font-size-large {
+  font-size: $font-size-large;
+  line-height: $line-height-large;
+  font-weight: $font-weight-bold;
+}
+
+@mixin font-size-larger {
+  font-size: $font-size-larger;
+  line-height: $line-height-larger;
+  font-weight: $font-weight-bold;
+}
+
+@mixin common-shadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//styles
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  color: $color-black;
+}
+
+#app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#main {
+  flex: 1;
+  width: 840px;
+  margin: 60px auto;
+}
+
+h1 {
+  @include font-size-larger;
+
+  margin: 0;
+  font-weight: $font-weight-bold;
+}
+
+h2 {
+  @include font-size-large;
+
+  margin: 0;
+  font-weight: $font-weight-bold;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+}
