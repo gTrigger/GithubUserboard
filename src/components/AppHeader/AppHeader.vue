@@ -76,6 +76,7 @@ export default {
        max-width: 100%;
        height: 80px;
        display: flex;
+       flex-flow: row wrap;
        justify-content: space-between;
        padding: 0 48px;
        z-index: 1;

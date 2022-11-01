@@ -58,11 +58,13 @@ export default {
 
   .github-users__user-repos {
     text-align: start;
-    width: 700px;
+    table-layout: fixed;
+    max-width: 700px;
+    width: 100%;
     margin: 0 auto;
 
     &-name {
-      width: 70%;
+      width: auto;
 
       a {
         &:hover {
@@ -73,7 +75,7 @@ export default {
     }
 
     &-watchers {
-      width: 15%;
+      width: 25%;
 
       img {
         vertical-align: middle;
@@ -81,11 +83,16 @@ export default {
     }
 
     &-stars {
-      width: 15%;
+      width: 25%;
 
       img {
         vertical-align: middle;
       }
+    }
+
+    .table__cell {
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 </style>

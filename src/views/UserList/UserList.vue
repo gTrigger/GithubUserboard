@@ -63,7 +63,7 @@ export default {
      margin-top: 60px;
      display: flex;
      flex-flow: row wrap;
-     gap: 10px;
+     justify-content: flex-start;
    }
 
    &-no-results {
